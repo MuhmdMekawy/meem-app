@@ -17,6 +17,9 @@ export default {
   h1{
     padding: 90px 0 ;
     text-align: center;
+    @media (max-width: 560px){
+      font-size: 30px;
+    }
     +a{
       // width: 200px;
       padding: 20px 50px;
