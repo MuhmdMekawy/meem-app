@@ -76,8 +76,8 @@ export default {
 
   .content{
     display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(256px , 1fr));
-    gap: 30px 20px;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 30px 38px;
     align-items: center;
     justify-content: center;
     .product-item{
@@ -108,7 +108,7 @@ export default {
         overflow: hidden;
       }
       h3{
-        font-size: 25px;
+        font-size: 18px;
         font-weight: 400;
         margin-bottom: 20px;
         padding-right:10px ;
