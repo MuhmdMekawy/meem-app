@@ -67,6 +67,10 @@
     display: flex;
     gap: 50px;
     margin: 36px 0;
+    @media(max-width : 560px){
+      flex-wrap: wrap;
+      gap: 30px;
+    }
     h3{
       font-size: 32px;
       font-weight: 500;
