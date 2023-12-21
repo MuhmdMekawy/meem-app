@@ -40,6 +40,10 @@
   border-radius: 20px;
   overflow: hidden;
   margin: 0 12px;
+  @media (max-width : 600px){
+    max-width: 300px;
+    margin:  0 auto;
+  }
   .close-icon{
     position: absolute;
     right: 15px;
