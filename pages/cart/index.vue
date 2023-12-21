@@ -19,8 +19,8 @@
               <img :src="item.product.product.thumbnail" alt="img">
             </div>
             <h3>{{ item.product.product.title }}</h3>
-            <h4>العدد: <span> {{ item.product.product.totalPrice / item.product.product.price }}</span></h4>
-            <h4>السعر: <span> {{ item.product.product.totalPrice }}</span>ريال</h4>
+            <!-- <h4>العدد: <span> {{ item.product.totalPrice / item.product.price }}</span></h4> -->
+            <h4>السعر: <span> {{ item.product.product.price}}</span>ريال</h4>
           </div>
         </div>
       </div>
@@ -119,6 +119,7 @@ export default {
         font-weight: 400;
         padding-right:10px ;
         margin-bottom: 5px;
+        text-align: center;
         span{
           font-weight: 500;
           color: rgb(162, 14, 14)
