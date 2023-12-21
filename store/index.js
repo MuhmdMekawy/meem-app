@@ -9,16 +9,15 @@ export const mutations = {
   setProducts(state, products) {
     state.products = products;
   },
-  addToCart(state, product , totalPrice) {
-    state.cartProducts = [...state.cartProducts, {product, totalPrice}]
+  addToCart(state, product) {
+    state.cartProducts = [...state.cartProducts, {product}]
+    // console.log(state.cartProducts)
+    // state.cartProducts = state.cartProducts.push({...product.product})
   },
-  // removeFromCart(state , {product}) {
-  //   // console.log(state.cartProducts[0] ,{ product , totalPrice})
-  //   const pros = state.cartProducts[0].product.product;
-  //   state.cartProducts = pros?.filter(item => item.id !== product.id)
-  //   // const productId = product.id;
-  //   // console.log(pros === productId)
-  // }
+  removeFromCart(state, { product }) {
+    // console.log(product)
+    state.cartProducts = state.cartProducts.filter(item => item.product.product.id !== product.id)
+  }
 };
 
 export const actions = {
@@ -39,11 +38,13 @@ export const actions = {
       // Handle the error as needed (e.g., show an error message)
     }
   },
-  addToCartAction({ commit } , {product , totalPrice}) {
-    commit('addToCart', {product, totalPrice})
+  addToCartAction({ commit } , {product }) {
+    commit('addToCart', { product })
+    // console.log(product)
+    // console.log(this.cartProducts)
   },
-  // removeFromCart({ commit }, { product}) {
-  //   commit('removeFromCart', {product})
-  //   // console.log({product , totalPrice})
-  // }
+  removeFromCart({ commit }, { product}) {
+    commit('removeFromCart', {product})
+    // console.log({product })
+  }
 };

@@ -24,7 +24,7 @@
         </div>
         <div class="content">
           <div v-for="product in products" :key="product.id" class="product-item">
-            <div class="badge ">{{product.price}}</div>
+            <div class="badge ">{{product.category}}</div>
             <div class="image-wrap"><img :src="product.thumbnail" alt="img" loading="lazy"></div>
             <div class="text">
               <h3>{{product.title}}</h3>

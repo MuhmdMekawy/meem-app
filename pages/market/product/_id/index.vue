@@ -21,7 +21,7 @@
             </form>
             <h5> {{ item.price * productCount}} ريال</h5>
             <div class="add-to-cart">
-              <button class="main-btn" @click="addTocart(item , productCount * item.price)">أضف الي السله</button>
+              <button class="main-btn" @click="addTocart(item)">أضف الي السله</button>
               <div class="counter">
                 <button :disabled="productCount === 1 ? true : false" @click="productCount--" >-</button>
                 <span>{{ productCount }}</span>
@@ -66,18 +66,19 @@ export default {
     this.$store.dispatch('fetchProducts');
   },
   methods: {
-    addTocart(product, totalPrice) {
+    addTocart(product) {
       const isProductInCart = this.$store.state.cartProducts.some(item => {
         return item.product.product === product
       });
 
       if (!isProductInCart) {
-        this.$store.dispatch('addToCartAction', { product, totalPrice });
+        this.$store.dispatch('addToCartAction', {product} );
         this.popupText= 'تمت إصافه المنتج بنجاح'
       } else {
         this.popupText= 'هذا المنتج موجود بالفعل ف السله'
       }
       this.showPopup = true;
+      // this.$store.state.cartProducts.filter(f=>console.log(f))
     }
   }
 }
