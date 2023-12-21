@@ -106,6 +106,9 @@ export default {
           font-weight: 500;
           color: #222222;
           margin-bottom: 25px;
+          @media (max-width:560px){
+            font-size: 20px;
+          }
         }
         h4{
           font-size: 16px;
