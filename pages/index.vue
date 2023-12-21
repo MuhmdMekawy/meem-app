@@ -10,7 +10,12 @@
 <script>
 export default {
   name: 'IndexPage',
-
+  beforeCreate() {
+      // Redirect to /market when on the root route
+      if (this.$route.path === '/') {
+        this.$router.push('/market');
+      }
+    },
 }
 </script>
 <style lang="scss">
