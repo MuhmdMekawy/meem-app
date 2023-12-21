@@ -39,6 +39,7 @@
   box-shadow: 0 0 5px #222;
   border-radius: 20px;
   overflow: hidden;
+  margin: 0 12px;
   .close-icon{
     position: absolute;
     right: 15px;
