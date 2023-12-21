@@ -16,17 +16,7 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
- router: {
-    base: '/',
-    extendRoutes(routes, resolve) {
-      // Set 'myPage' as the home page
-      routes.push({
-        name: 'NuxtMarket',
-        path: '/market',
-        component: resolve(__dirname, 'pages/market/index.vue')
-      });
-    }
-  },
+ 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['assets/css/style.css'],
 
