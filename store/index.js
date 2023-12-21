@@ -12,12 +12,8 @@ export const mutations = {
   addToCart(state, product , totalPrice) {
     state.cartProducts = [...state.cartProducts, {product, totalPrice}]
   },
-  // removeFromCart(state , {product}) {
-  //   // console.log(state.cartProducts[0] ,{ product , totalPrice})
-  //   const pros = state.cartProducts[0].product.product;
-  //   state.cartProducts = pros?.filter(item => item.id !== product.id)
-  //   // const productId = product.id;
-  //   // console.log(pros === productId)
+    // removeFromCart(state , {product}) {
+  //   state.cartProducts = state.products.filter(item => item.id !== product.id)
   // }
 };
 
