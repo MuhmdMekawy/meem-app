@@ -198,10 +198,10 @@
           <li><a href="">الشروط والاحكام</a></li>
           <li><a href="">اتصل بنا</a></li>
         </ul>
-        <div class="copyright">
+        <!-- <div class="copyright">
           <p>جميع الحقوق محفوظة لدى منصة ميم التعليمية</p>
           <div class="image-wrap"><img src="../assets/images/ryad.png" alt="img" loading="lazy"> <span>تصميم شركة الرياض</span></div>
-        </div>
+        </div> -->
       </div>
     </section>
   </div>
